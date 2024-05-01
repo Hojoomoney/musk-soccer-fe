@@ -64,14 +64,6 @@ export const getPlayerByPositionAndRegionName = async () => {
         return data
 }
 
-//practice8
-export const getPlayerByRegionNameOrderByHeightAndWeightKey = ['getPlayerByRegionNameOrderByHeightAndWeight']
-export const getPlayerByRegionNameOrderByHeightAndWeight = async () => {
-      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/search`, {
-        
-      } );
-        return data
-}
 
 //practice18
 export const getPlayerLimit5Key = ['getPlayerLimit5']
@@ -81,5 +73,15 @@ export const getPlayerLimit5 = async () => {
       } );
         return data
 }
+
+//practice8
+export const getPlayerByRegionNameOrderByHeightAndWeightKey = ['getPlayerByRegionNameOrderByHeightAndWeight']
+export const getPlayerByRegionNameOrderByHeightAndWeight = async () => {
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/search`, {
+        
+      } );
+        return data
+}
+
 
 
