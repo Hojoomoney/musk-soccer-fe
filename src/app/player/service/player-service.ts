@@ -9,9 +9,34 @@ export const getDistinctByPosition = async() =>{
     return data;
 }
 
-export const getPlayerProblemKey = ['getPlayerProblem'];
-export const getPlayerProblem = async() => {
-    const {data} = await axios.get(`${process.env.API_URL}/search`,
-        {params:{q:'player', op:'number'}}
-    )
+//practice7
+export const getPlayerByPositionAndRegionNameKey = ['getPlayerByPositionAndRegionName']
+export const getPlayerByPositionAndRegionName = async () => {
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/search`, {
+        params : {q : "regionName",
+                oq : "position"
+                }
+      } );
+        return data
 }
+
+
+//practice18
+export const getPlayerLimit5Key = ['getPlayerLimit5']
+export const getPlayerLimit5 = async () => {
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/search`, {
+        
+      } );
+        return data
+}
+
+//practice8
+export const getPlayerByRegionNameOrderByHeightAndWeightKey = ['getPlayerByRegionNameOrderByHeightAndWeight']
+export const getPlayerByRegionNameOrderByHeightAndWeight = async () => {
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/search`, {
+        
+      } );
+        return data
+}
+
+
